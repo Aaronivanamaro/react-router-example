@@ -1,0 +1,16 @@
+{
+  "versions": [
+    {
+      "title": "Version Five",
+      "body": "React Router DOM enables you to implement dynamic routing in a web app. Unlike the traditional routing architecture in which the routing is handled in a configuration outside of a running app, React Router DOM facilitates component-based routing according to the needs of the app and platform.",
+      "version": "v5.2.0",
+      "id": 1
+    },
+    {
+      "title": "Version Six",
+      "body": "The next major version of React Router, version 6, is just around the corner. We published the first alpha release back in January, and we released another alpha last week.",
+      "version": "v6.0.2",
+      "id": 2
+    }
+  ]
+}
