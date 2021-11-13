@@ -1,9 +1,7 @@
-import { useParams } from "react-router-dom";
 import useAxios from "../hooks/useAxios";
 import Spinner from "./Spinner";
 
-const VersionDetails = () => {
-  const { id } = useParams();
+const VersionDetails = ({id}) => {
   const { data: version, isPending } = useAxios(`http://localhost:8000/versions/${id}`);
 
   return (

@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({openDocs}) => {
   return (
     <nav className="navbar">
       <h1>React-router-dom</h1>
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/docs" style={{ 
+        <a href="/">Home</a>
+        <a onClick={openDocs} 
+          style={{ 
           color: 'white', 
           backgroundColor: '#f1356d',
           borderRadius: '8px' 
-        }}>Docs</Link>
+        }}>Docs</a>
       </div>
     </nav>
   );

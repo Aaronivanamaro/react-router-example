@@ -1,29 +1,18 @@
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Docs from './components/Docs';
-import VersionDetails from './components/VersionDetails';
+import { useState } from 'react';
 
 function App() {
+  const [docsOpen, setDocsOpen] = useState(true)
+
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/docs">
-              <Docs />
-            </Route>
-            <Route path="/versions/:id">
-              <VersionDetails />
-            </Route>
-          </Switch>
-        </div>
+    <div className="App">
+      <Navbar openDocs={() => setDocsOpen(!docsOpen)}/>
+      <div className="content">
+        {docsOpen ? <Home /> : <Docs />}
       </div>
-    </Router>
+    </div>
   );
 }
 
