@@ -4,7 +4,7 @@ import Spinner from "./Spinner";
 
 const VersionDetails = () => {
   const { id } = useParams();
-  const { data: version, isPending } = useAxios(`http://localhost:8000/versions/${id}`);
+  const { data: version, isPending } = useAxios(`http://localhost:8000/versions/${id}`, `Blog ${id} Error:`, `Blog ${id} Axios:`);
 
   return (
     <div className="version-details">
